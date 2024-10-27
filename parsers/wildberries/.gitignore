@@ -1,0 +1,6 @@
+.DS_Store
+.python-version
+.vscode
+*.json
+*.xlsx
+dev_reqs.txt

@@ -1,0 +1,12 @@
+FROM python:3.10
+
+RUN pip install --upgrade pip
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["python", "./leroymerlin/driver.py", "python", "./wildberries/wbparser.py"]
