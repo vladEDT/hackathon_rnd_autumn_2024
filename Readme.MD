@@ -1,4 +1,4 @@
-# Product Card Finder
+# Product Card Finder (waka_team)
 
 ![Product Card Finder](https://i.ibb.co/tDsYmS7/2024-10-27-11-34-07.png)
 
