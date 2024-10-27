@@ -1,10 +1,10 @@
 # Product Card Finder
 
-![Product Card Finder](https://ibb.co/CQ7V1qk)
+![Product Card Finder](https://i.ibb.co/tDsYmS7/2024-10-27-11-34-07.png)
 
 ## О проекте
 
-Product Card Finder — это приложение, которое позволяет пользователям искать карточки товаров по названию или категории. Приложение использует мощный стек технологий, включая React, Node.js, Express, MongoDB и Python для парсинга данных.
+Product Card Finder (http://150.241.66.50:5173/) — это приложение, которое позволяет пользователям искать карточки товаров по названию или категории. Приложение использует мощный стек технологий, включая React, Node.js, Express, MongoDB и Python для парсинга данных.
 
 ## Как это работает
 
