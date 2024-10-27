@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: Product Card Finder API
+  description: API для поиска карточек товаров
+  version: 1.0.0
+servers:
+  - url: http://150.241.66.50:5173/api 
+
+paths:
+  /search:
+    post:
+      summary: Получение результатов поиска товаров
+      description: Возвращает отфильтрованные по критериям карточки товаров по заданному запросу
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  example: "лак"
+                  description: "Название или категория товара для поиска"
+      responses:
+        '200':
+          description: Успешный ответ с результатами поиска
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: "HP Spectre x360"
+                          description: "Название товара"
+                        price:
+                          type: string
+                          example: "$999"
+                          description: "Цена товара"
+                        link:
+                          type: string
+                          example: "https://example.com/product/123"
+                          description: "Ссылка на товар"
+        '400':
+          description: Неверный запрос
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Запрос должен содержать поле query"
+                    description: "Описание ошибки"
+        '500':
+          description: Ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Ошибка при обработке запроса"
+                    description: "Описание ошибки"
