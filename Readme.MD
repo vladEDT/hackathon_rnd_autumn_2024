@@ -35,3 +35,39 @@ Product Card Finder — это приложение, которое позвол
    ```bash
    git clone https://github.com/yourusername/product-card-finder.git
    cd product-card-finder
+   ```
+
+2. Соберите и запустите приложение с помощью Docker:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+3. Откройте приложение в браузере по адресу http://localhost:5173
+
+## Структура проекта
+
+```bash
+/product-card-finder
+├── /client              # Frontend на React
+├── /server              # Backend на Node.js
+├── /parser              # Python-скрипты для парсинга
+├── Dockerfile.client    # Настройка докера для React
+├── Dockerfile.server    # Настройка докера для Node.JS
+├── Dockerfile.parsers   # Настройка докера для Python
+└── docker-compose.yml   # Конфигурация Docker
+```
+
+## API
+
+### Получение результатов поиска
+
+- **URL**: /api/search
+- **Метод**: POST
+- **Тело запроса**:
+  |       |                        |
+  |:-----:|:----------------------:|
+  | query | название или категория |
+
+
+
